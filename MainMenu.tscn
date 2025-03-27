@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cjmmvc6uuoom6"]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = -23.0
+offset_top = 4.0
+offset_right = 1131.0
+offset_bottom = 328.0
+
+[node name="Button" type="Button" parent="."]
+offset_left = -20.0
+offset_top = 369.0
+offset_right = 111.0
+offset_bottom = 459.0
+text = "this is a button"
