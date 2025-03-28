@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://7rxhqlr5e5qv"]
 
-[ext_resource type="PackedScene" uid="uid://c807qjyukgdqx" path="res://assets/PlayerDef/CharHold.gLTF.blend" id="1_4h2e2"]
+[ext_resource type="PackedScene" uid="uid://c807qjyukgdqx" path="res://Assets/PlayerDef/CharHold.gLTF.blend" id="1_4h2e2"]
 
 [sub_resource type="Environment" id="Environment_xi3ak"]
 

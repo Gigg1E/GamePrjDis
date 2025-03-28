@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c807qjyukgdqx"
-path="res://.godot/imported/CharHold.gLTF.blend-5a7b70d4e766c61994ee6beeb4e3171a.scn"
+path="res://.godot/imported/CharHold.gLTF.blend-13a7709cf949b21884e58614525d64de.scn"
 
 [deps]
 
-source_file="res://assets/PlayerDef/CharHold.gLTF.blend"
-dest_files=["res://.godot/imported/CharHold.gLTF.blend-5a7b70d4e766c61994ee6beeb4e3171a.scn"]
+source_file="res://Assets/PlayerDef/CharHold.gLTF.blend"
+dest_files=["res://.godot/imported/CharHold.gLTF.blend-13a7709cf949b21884e58614525d64de.scn"]
 
 [params]
 
