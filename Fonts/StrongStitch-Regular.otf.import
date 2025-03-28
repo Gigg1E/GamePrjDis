@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cwddh242sslj1"
-path="res://.godot/imported/StrongStitch-Regular.otf-5b3a89ebf79af1022fb55ab834a2497a.fontdata"
+path="res://.godot/imported/StrongStitch-Regular.otf-0e22fc414b4af32e636c8fd9786a403d.fontdata"
 
 [deps]
 
-source_file="res://strong-stitch/StrongStitch-Regular.otf"
-dest_files=["res://.godot/imported/StrongStitch-Regular.otf-5b3a89ebf79af1022fb55ab834a2497a.fontdata"]
+source_file="res://Fonts/StrongStitch-Regular.otf"
+dest_files=["res://.godot/imported/StrongStitch-Regular.otf-0e22fc414b4af32e636c8fd9786a403d.fontdata"]
 
 [params]
 

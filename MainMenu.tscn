@@ -1,9 +1,76 @@
-[gd_scene load_steps=5 format=3 uid="uid://cjmmvc6uuoom6"]
 
-[ext_resource type="FontFile" uid="uid://cwddh242sslj1" path="res://strong-stitch/StrongStitch-Regular.otf" id="1_eiy7p"]
+[gd_scene load_steps=36 format=3 uid="uid://cjmmvc6uuoom6"]
+
+
 [ext_resource type="VideoStream" uid="uid://ffqthg3auqph" path="res://Epic-Woods-Wheelchair-Fight-Scene.ogv" id="1_h7a2f"]
-[ext_resource type="FontFile" uid="uid://ojmvpp422d4c" path="res://pedroc-blur-demo/PedrocBlur-Regular_demo.otf" id="2_h7a2f"]
-[ext_resource type="Script" uid="uid://bdckewt3w1um8" path="res://strong-stitch/play_btn.gd" id="4_qoqlk"]
+
+[ext_resource type="FontFile" uid="uid://cwddh242sslj1" path="res://Fonts/StrongStitch-Regular.otf" id="2_qoqlk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iwfq2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7r1g0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cqjrg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e2xy7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fimr5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u7cqb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_afec1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_31qfy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qie43"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sbtgl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v22b0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_61cf8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rnncn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3fnrj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m04lp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1thib"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iht1c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l1t4j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dl1jy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y4010"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2gjqv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ig1gi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f3wmj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xxvoy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t8cnk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e2bvh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tvmpt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ckqpr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tkoa0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d6scf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oq2v3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nw2l6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ee4k3"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -44,52 +111,123 @@ theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 64
 theme_override_constants/margin_bottom = 80
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
-layout_mode = 2
-
-[node name="GameTitle" type="Label" parent="Control/MarginContainer/VBoxContainer"]
-layout_mode = 2
+[node name="GameTitle" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -269.0
+offset_top = 47.0
+offset_right = 275.0
+offset_bottom = 122.0
+grow_horizontal = 2
 size_flags_horizontal = 0
-theme_override_fonts/font = ExtResource("1_eiy7p")
-theme_override_font_sizes/font_size = 64
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_qoqlk")
+theme_override_font_sizes/font_size = 75
 text = "DisCombatent"
 
-[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(0, 125)
-layout_mode = 2
+offset_left = 2.0
+offset_top = 12.0
+offset_right = 2.0
+offset_bottom = 137.0
+theme_override_constants/margin_left = 0
 
-[node name="PlayBtn" type="Button" parent="Control/MarginContainer/VBoxContainer"]
-layout_mode = 2
+[node name="PlayBtn" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -31.5
+offset_right = 45.0
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 0
+size_flags_vertical = 4
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_h7a2f")
+theme_override_constants/outline_size = -120
 theme_override_font_sizes/font_size = 45
-action_mode = 0
+
+theme_override_styles/focus = SubResource("StyleBoxEmpty_iwfq2")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_7r1g0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cqjrg")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_e2xy7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_fimr5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_u7cqb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_afec1")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_31qfy")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qie43")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_sbtgl")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_v22b0")
+
 text = "Play"
 script = ExtResource("4_qoqlk")
 
-[node name="MarginContainer2" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(0, 20)
-layout_mode = 2
+offset_left = 2.0
+offset_top = 12.0
+offset_right = 2.0
+offset_bottom = 32.0
 
-[node name="SettingsBtn" type="Button" parent="Control/MarginContainer/VBoxContainer"]
-layout_mode = 2
+[node name="SettingsBtn" type="Button" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -63.0
+offset_right = 71.0
+grow_vertical = 0
 size_flags_horizontal = 0
 theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_h7a2f")
 theme_override_font_sizes/font_size = 45
-text = "Settings"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_61cf8")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_rnncn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3fnrj")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_m04lp")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_1thib")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_iht1c")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_l1t4j")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_dl1jy")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_y4010")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_2gjqv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ig1gi")
+text = "⚙️"
 
-[node name="MarginContainer3" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer"]
+[node name="MarginContainer3" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(0, 20)
-layout_mode = 2
+offset_left = 2.0
+offset_top = 12.0
+offset_right = 2.0
+offset_bottom = 32.0
 
-[node name="QuitBtn" type="Button" parent="Control/MarginContainer/VBoxContainer"]
-layout_mode = 2
+[node name="QuitBtn" type="Button" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -94.0
+offset_top = -63.0
+grow_horizontal = 0
+grow_vertical = 0
 size_flags_horizontal = 0
 theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_h7a2f")
 theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxEmpty_f3wmj")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_xxvoy")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_t8cnk")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_e2bvh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_tvmpt")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ckqpr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tkoa0")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_d6scf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_oq2v3")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_nw2l6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ee4k3")
 text = "Quit"

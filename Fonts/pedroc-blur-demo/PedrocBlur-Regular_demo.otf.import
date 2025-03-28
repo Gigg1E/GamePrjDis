@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://ojmvpp422d4c"
-path="res://.godot/imported/PedrocBlur-Regular_demo.otf-0fa4dfb53f9152e57dfeabb86676a3db.fontdata"
+path="res://.godot/imported/PedrocBlur-Regular_demo.otf-5e4defdc41c744453d37e79b5d36f790.fontdata"
 
 [deps]
 
-source_file="res://pedroc-blur-demo/PedrocBlur-Regular_demo.otf"
-dest_files=["res://.godot/imported/PedrocBlur-Regular_demo.otf-0fa4dfb53f9152e57dfeabb86676a3db.fontdata"]
+source_file="res://Fonts/pedroc-blur-demo/PedrocBlur-Regular_demo.otf"
+dest_files=["res://.godot/imported/PedrocBlur-Regular_demo.otf-5e4defdc41c744453d37e79b5d36f790.fontdata"]
 
 [params]
 
