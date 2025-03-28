@@ -11,5 +11,11 @@ config_version=5
 [application]
 
 config/name="DevTeamPrjOne"
+run/main_scene="uid://cjmmvc6uuoom6"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/transparent=true
+window/per_pixel_transparency/allowed=true
