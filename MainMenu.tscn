@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjmmvc6uuoom6"]
+[gd_scene load_steps=5 format=3 uid="uid://cjmmvc6uuoom6"]
 
 [ext_resource type="FontFile" uid="uid://cwddh242sslj1" path="res://strong-stitch/StrongStitch-Regular.otf" id="1_eiy7p"]
 [ext_resource type="VideoStream" uid="uid://ffqthg3auqph" path="res://Epic-Woods-Wheelchair-Fight-Scene.ogv" id="1_h7a2f"]
 [ext_resource type="FontFile" uid="uid://ojmvpp422d4c" path="res://pedroc-blur-demo/PedrocBlur-Regular_demo.otf" id="2_h7a2f"]
+[ext_resource type="Script" uid="uid://bdckewt3w1um8" path="res://strong-stitch/play_btn.gd" id="4_qoqlk"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -63,7 +64,9 @@ size_flags_horizontal = 0
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_h7a2f")
 theme_override_font_sizes/font_size = 45
+action_mode = 0
 text = "Play"
+script = ExtResource("4_qoqlk")
 
 [node name="MarginContainer2" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 20)
