@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b545mhnhf2b58"
-path.s3tc="res://.godot/imported/Ch36_1001_Glossiness.png-346275efb062e17984e507d4ce3632ac.s3tc.ctex"
+path.s3tc="res://.godot/imported/Ch36_1001_Glossiness.png-fd3fb25f75011353e2e26a2a709cf240.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/PlayerDef/textures/Ch36_1001_Glossiness.png"
-dest_files=["res://.godot/imported/Ch36_1001_Glossiness.png-346275efb062e17984e507d4ce3632ac.s3tc.ctex"]
+source_file="res://Assets/PlayerDef/textures/Ch36_1001_Glossiness.png"
+dest_files=["res://.godot/imported/Ch36_1001_Glossiness.png-fd3fb25f75011353e2e26a2a709cf240.s3tc.ctex"]
 
 [params]
 

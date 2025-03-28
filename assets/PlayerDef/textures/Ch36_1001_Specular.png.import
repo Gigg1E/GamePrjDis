@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bthnaaixyq5lm"
-path="res://.godot/imported/Ch36_1001_Specular.png-6758ebeaa53519374851017de4c6d0c1.ctex"
+path="res://.godot/imported/Ch36_1001_Specular.png-fcefdf8ea9ce13c5f09f320a7022a5f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PlayerDef/textures/Ch36_1001_Specular.png"
-dest_files=["res://.godot/imported/Ch36_1001_Specular.png-6758ebeaa53519374851017de4c6d0c1.ctex"]
+source_file="res://Assets/PlayerDef/textures/Ch36_1001_Specular.png"
+dest_files=["res://.godot/imported/Ch36_1001_Specular.png-fcefdf8ea9ce13c5f09f320a7022a5f8.ctex"]
 
 [params]
 
