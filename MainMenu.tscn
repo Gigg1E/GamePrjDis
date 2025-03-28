@@ -1,16 +1,92 @@
-[gd_scene format=3 uid="uid://cjmmvc6uuoom6"]
+[gd_scene load_steps=4 format=3 uid="uid://cjmmvc6uuoom6"]
 
-[node name="MainMenu" type="Node2D"]
+[ext_resource type="FontFile" uid="uid://cwddh242sslj1" path="res://strong-stitch/StrongStitch-Regular.otf" id="1_eiy7p"]
+[ext_resource type="VideoStream" uid="uid://ffqthg3auqph" path="res://Epic-Woods-Wheelchair-Fight-Scene.ogv" id="1_h7a2f"]
+[ext_resource type="FontFile" uid="uid://ojmvpp422d4c" path="res://pedroc-blur-demo/PedrocBlur-Regular_demo.otf" id="2_h7a2f"]
 
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_left = -23.0
-offset_top = 4.0
-offset_right = 1131.0
-offset_bottom = 328.0
+[node name="CanvasLayer" type="CanvasLayer"]
 
-[node name="Button" type="Button" parent="."]
-offset_left = -20.0
-offset_top = 369.0
-offset_right = 111.0
-offset_bottom = 459.0
-text = "this is a button"
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_h7a2f")
+volume_db = -80.0
+autoplay = true
+expand = true
+loop = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+
+[node name="GameTitle" type="Label" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("1_eiy7p")
+theme_override_font_sizes/font_size = 64
+text = "DisCombatent"
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 125)
+layout_mode = 2
+
+[node name="PlayBtn" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_h7a2f")
+theme_override_font_sizes/font_size = 45
+text = "Play"
+
+[node name="MarginContainer2" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="SettingsBtn" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_h7a2f")
+theme_override_font_sizes/font_size = 45
+text = "Settings"
+
+[node name="MarginContainer3" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="QuitBtn" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_h7a2f")
+theme_override_font_sizes/font_size = 45
+text = "Quit"
