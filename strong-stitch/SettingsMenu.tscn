@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bk7c0p62lt6m0"]
+
+[node name="SettingsMenu" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1.0
+offset_top = 3.0
+offset_right = 1150.0
+offset_bottom = 646.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Control"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -3.0
+offset_right = 1154.0
+offset_bottom = 646.0

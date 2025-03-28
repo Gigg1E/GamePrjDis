@@ -1,6 +1,9 @@
+
 [gd_scene load_steps=36 format=3 uid="uid://cjmmvc6uuoom6"]
 
+
 [ext_resource type="VideoStream" uid="uid://ffqthg3auqph" path="res://Epic-Woods-Wheelchair-Fight-Scene.ogv" id="1_h7a2f"]
+
 [ext_resource type="FontFile" uid="uid://cwddh242sslj1" path="res://Fonts/StrongStitch-Regular.otf" id="2_qoqlk"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iwfq2"]
@@ -148,6 +151,7 @@ size_flags_vertical = 4
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = -120
 theme_override_font_sizes/font_size = 45
+
 theme_override_styles/focus = SubResource("StyleBoxEmpty_iwfq2")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_7r1g0")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_cqjrg")
@@ -159,7 +163,9 @@ theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_31qfy")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_qie43")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_sbtgl")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_v22b0")
+
 text = "Play"
+script = ExtResource("4_qoqlk")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(0, 20)

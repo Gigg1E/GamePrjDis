@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://7rxhqlr5e5qv"]
+
+[ext_resource type="PackedScene" uid="uid://c807qjyukgdqx" path="res://assets/PlayerDef/CharHold.gLTF.blend" id="1_4h2e2"]
+
+[sub_resource type="Environment" id="Environment_xi3ak"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_1yngt"]
+
+[node name="MainScene" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.998636, 0.052214, 0, -0.052214, 0.998636, -5.34555, 0.649737, -26.0958)
+environment = SubResource("Environment_xi3ak")
+attributes = SubResource("CameraAttributesPractical_1yngt")
+doppler_tracking = 1
+current = true
+fov = 100.059
+
+[node name="CharHold_gLTF" parent="." instance=ExtResource("1_4h2e2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.67787, 0, -31.3707)
