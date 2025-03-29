@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://c8rymlmxqfs7l"]
+
+[ext_resource type="FontFile" uid="uid://ojmvpp422d4c" path="res://Fonts/pedroc-blur-demo/PedrocBlur-Regular_demo.otf" id="1_xdsuk"]
+
+[resource]
+resource_name = "BigLabelTheme"
+default_base_scale = 1.0
+default_font = ExtResource("1_xdsuk")
+default_font_size = 145
