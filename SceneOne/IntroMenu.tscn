@@ -1,0 +1,183 @@
+[gd_scene load_steps=11 format=3 uid="uid://c0i1q4ffm68ia"]
+
+[ext_resource type="PackedScene" uid="uid://7rxhqlr5e5qv" path="res://SceneOne/MainScene.tscn" id="1_wcf05"]
+[ext_resource type="FontFile" uid="uid://ojmvpp422d4c" path="res://Fonts/pedroc-blur-demo/PedrocBlur-Regular_demo.otf" id="2_d3b2v"]
+[ext_resource type="Script" uid="uid://b6jnyny5fty8h" path="res://Scirpts/MenuScripts/playbtn.gd" id="3_d3b2v"]
+[ext_resource type="Script" uid="uid://chau6oq2muqi6" path="res://Scirpts/MenuScripts/quitbtn.gd" id="4_3luk3"]
+
+[sub_resource type="Environment" id="Environment_wiis8"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_78cxs"]
+
+[sub_resource type="Theme" id="Theme_wiis8"]
+resource_local_to_scene = true
+resource_name = "BigWest"
+default_font = ExtResource("2_d3b2v")
+default_font_size = 66
+
+[sub_resource type="Animation" id="Animation_4p1gi"]
+resource_name = "IntroAni"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackGround/SubViewportContainer/SubViewport/Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-9, 1, -30), Vector3(-7, 1, -31.208), Vector3(-9, 1, -32.78), Vector3(-10, 1, -31), Vector3(-9, 1, -30)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BackGround/SubViewportContainer/SubViewport/Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.20944, 0, 0), Vector3(0.20944, 1.5708, 0), Vector3(0.20944, 3.14159, 0), Vector3(0.20944, 4.71239, 0), Vector3(0.20944, 6.28319, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5n5dn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackGround/SubViewportContainer/SubViewport/Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-8.65918, 0.649737, -29.935)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BackGround/SubViewportContainer/SubViewport/Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.213, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p13dw"]
+_data = {
+&"IntroAni": SubResource("Animation_4p1gi"),
+&"RESET": SubResource("Animation_5n5dn")
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="BackGround" type="Node3D" parent="."]
+
+[node name="MainScene" parent="BackGround" instance=ExtResource("1_wcf05")]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="BackGround"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="BackGround/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1280, 720)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="BackGround/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.977401, -0.211393, 0, 0.211393, 0.977401, -8.65918, 0.649737, -29.935)
+environment = SubResource("Environment_wiis8")
+attributes = SubResource("CameraAttributesPractical_78cxs")
+doppler_tracking = 1
+current = true
+fov = 100.059
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 65
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 65
+theme_override_constants/margin_bottom = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = SubResource("Theme_wiis8")
+theme_override_colors/font_color = Color(0.766335, 0.597163, 0.115201, 1)
+theme_override_colors/font_shadow_color = Color(0.438495, 0.282502, 4.81308e-08, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_d3b2v")
+theme_override_font_sizes/font_size = 66
+text = "DisComabatants"
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="playbtn" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_d3b2v")
+theme_override_font_sizes/font_size = 45
+text = "Play"
+flat = true
+script = ExtResource("3_d3b2v")
+
+[node name="optionsbtn" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_d3b2v")
+theme_override_font_sizes/font_size = 45
+text = "Options"
+flat = true
+
+[node name="quitbtn" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_d3b2v")
+theme_override_font_sizes/font_size = 45
+text = "Exit"
+flat = true
+script = ExtResource("4_3luk3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_p13dw")
+}
+speed_scale = 0.4
