@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://613thhoowdw2"]
+[gd_scene load_steps=9 format=3 uid="uid://bq4w47mf1ub0m"]
 
 [ext_resource type="Theme" uid="uid://c8rymlmxqfs7l" path="res://Fonts/Custom/BigLabel.tres" id="1_6exom"]
 [ext_resource type="FontFile" uid="uid://ojmvpp422d4c" path="res://Fonts/pedroc-blur-demo/PedrocBlur-Regular_demo.otf" id="2_ohi1j"]
@@ -100,7 +100,7 @@ size = Vector2i(1200, 720)
 render_target_update_mode = 4
 
 [node name="Camera3D" type="Camera3D" parent="BackGround/SubViewportContainer/SubViewport"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.11779, 2.34771)
+transform = Transform3D(-1, 0, 2.53518e-06, 0, 1, 0, -2.53518e-06, 0, -1, 0, 1.11779, 2.34771)
 attributes = SubResource("CameraAttributesPractical_ohi1j")
 fov = 100.0
 
