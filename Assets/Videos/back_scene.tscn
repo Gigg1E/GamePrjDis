@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxydkwfvlvo6k"]
+
+[ext_resource type="PackedScene" uid="uid://c807qjyukgdqx" path="res://Assets/PlayerDef/CharHold.gLTF.blend" id="1_ggp1i"]
+
+[node name="BackScene" type="Node3D"]
+
+[node name="CharHold_gLTF" parent="." instance=ExtResource("1_ggp1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00422281, 0, 1.66893e-06)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.11779, 2.34771)

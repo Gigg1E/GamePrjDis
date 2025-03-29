@@ -1,0 +1,179 @@
+[gd_scene load_steps=9 format=3 uid="uid://613thhoowdw2"]
+
+[ext_resource type="Theme" uid="uid://c8rymlmxqfs7l" path="res://Fonts/Custom/BigLabel.tres" id="1_6exom"]
+[ext_resource type="FontFile" uid="uid://ojmvpp422d4c" path="res://Fonts/pedroc-blur-demo/PedrocBlur-Regular_demo.otf" id="2_ohi1j"]
+[ext_resource type="PackedScene" uid="uid://dxydkwfvlvo6k" path="res://Assets/Videos/back_scene.tscn" id="3_ohi1j"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_ohi1j"]
+resource_local_to_scene = true
+resource_name = "IntroCamAtt"
+exposure_multiplier = 2.0
+dof_blur_near_enabled = true
+dof_blur_near_distance = 1.8
+
+[sub_resource type="Environment" id="Environment_ohi1j"]
+background_mode = 5
+background_energy_multiplier = 3.75
+
+[sub_resource type="Animation" id="Animation_ohi1j"]
+resource_name = "IntroCamAnim"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackGround/SubViewportContainer/SubViewport/Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.02, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.11779, 2.34771), Vector3(2, 1, 0), Vector3(0.05, 1, -2), Vector3(-2, 1.059, 0.174), Vector3(0, 1.11779, 2.34771)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BackGround/SubViewportContainer/SubViewport/Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.02, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.5708, 0), Vector3(0, 3.14159, 0), Vector3(0, 4.71239, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fg0sg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackGround/SubViewportContainer/SubViewport/Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.11779, 2.34771)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BackGround/SubViewportContainer/SubViewport/Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 3.14159, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ihol7"]
+_data = {
+&"IntroCamAnim": SubResource("Animation_ohi1j"),
+&"RESET": SubResource("Animation_fg0sg")
+}
+
+[node name="Menu" type="CanvasLayer"]
+
+[node name="BackGround" type="Node3D" parent="."]
+
+[node name="BackScene" parent="BackGround" instance=ExtResource("3_ohi1j")]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="BackGround"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="BackGround/SubViewportContainer"]
+handle_input_locally = false
+msaa_2d = 1
+msaa_3d = 1
+use_taa = true
+use_debanding = true
+size = Vector2i(1200, 720)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="BackGround/SubViewportContainer/SubViewport"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.11779, 2.34771)
+attributes = SubResource("CameraAttributesPractical_ohi1j")
+fov = 100.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="BackGround"]
+environment = SubResource("Environment_ohi1j")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 65
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 65
+theme_override_constants/margin_bottom = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+theme = ExtResource("1_6exom")
+theme_override_colors/font_color = Color(0.647059, 0.290196, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.886275, 0.827451, 0, 0.576471)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("2_ohi1j")
+theme_override_font_sizes/font_size = 135
+text = "DisConbatants"
+
+[node name="Button" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_ohi1j")
+theme_override_font_sizes/font_size = 60
+text = "PLAY"
+flat = true
+
+[node name="Button2" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_ohi1j")
+theme_override_font_sizes/font_size = 60
+text = "SETTINGS"
+flat = true
+
+[node name="Button3" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_ohi1j")
+theme_override_font_sizes/font_size = 60
+text = "QUIT"
+flat = true
+language = "English"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ihol7")
+}

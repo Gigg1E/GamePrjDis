@@ -11,11 +11,21 @@ config_version=5
 [application]
 
 config/name="DevTeamPrjOne"
+<<<<<<< Updated upstream
 run/main_scene="uid://cjmmvc6uuoom6"
+=======
+run/main_scene="uid://613thhoowdw2"
+>>>>>>> Stashed changes
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=1200
 window/size/transparent=true
 window/per_pixel_transparency/allowed=true
+
+[rendering]
+
+anti_aliasing/quality/msaa_3d=1
+anti_aliasing/quality/screen_space_aa=1
